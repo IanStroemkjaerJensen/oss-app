@@ -9,7 +9,7 @@ config.autoAddCss = false;
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "OpenSource Suggestions App",
+  title: "OpenSource Suggestions",
   description: "Suggestions of OpenSource projects for developers",
 };
 
