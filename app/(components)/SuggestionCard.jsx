@@ -6,9 +6,6 @@ import Label from "./Label";
 const SuggestionCard = () => {
   return (
     <div className="flex flex-col bg-card hover:bg-card-hover rounded-md shadow-lg p-3 m-2 w-fit">
-      <div className=" ml-auto mb-2">
-        <DeleteButton />
-      </div>
       <div className="flex mb-3 ml-auto">
         <PopularityDisplay />
       </div>
