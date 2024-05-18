@@ -15,8 +15,11 @@ module.exports = {
       colors: {
         nav: "#0a192f",
         page: "#112240;",
-        card: "#47566a",
+        card: "#233554",
+        "card-hover": "#4f5e74",
         "default-textcolor": "#f1f3f5",
+        btn: "",
+        "btn-hover": "",
       },
     },
   },
