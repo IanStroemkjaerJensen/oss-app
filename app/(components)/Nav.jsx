@@ -1,4 +1,8 @@
-import { faHome, faPlusCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faPlus,
+  faPlusCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
@@ -11,7 +15,7 @@ const Nav = () => {
           <FontAwesomeIcon icon={faHome} className="icon" />
         </Link>
         <Link href="/SuggestionPage/new">
-          <FontAwesomeIcon icon={faPlusCircle} className="icon" />
+          <FontAwesomeIcon icon={faPlus} className="icon" />
         </Link>
       </div>
       <div>
