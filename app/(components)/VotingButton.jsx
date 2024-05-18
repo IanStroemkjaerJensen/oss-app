@@ -5,7 +5,7 @@ import React from "react";
 const VotingButton = () => {
   return (
     <div className="flex flex-col">
-      <button>
+      <button className="mb-1">
         <FontAwesomeIcon
           icon={faArrowUp}
           className="text-orange-400 hover:cursor-pointer hover:text-red-200"
