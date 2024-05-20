@@ -1,6 +1,5 @@
 import React from "react";
 import SuggestionCard from "./(components)/SuggestionCard";
-import VotingCard from "./(components)/VotingCard";
 
 const getSuggestions = async () => {
   try {

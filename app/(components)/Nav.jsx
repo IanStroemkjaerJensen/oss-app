@@ -1,8 +1,4 @@
-import {
-  faHome,
-  faPlus,
-  faPlusCircle,
-} from "@fortawesome/free-solid-svg-icons";
+import { faHome, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import React from "react";
