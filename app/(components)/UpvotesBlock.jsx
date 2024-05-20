@@ -6,7 +6,7 @@ const UpvotesBlock = ({ suggestion }) => {
   return (
     <div>
       <label className="text-sm p-1 m-1 text-white">{suggestion.upvotes}</label>
-      <FontAwesomeIcon icon={faFire} className="text-orange-300" />
+      <FontAwesomeIcon icon={faFire} className="text-orange-400" />
       <label className="text-sm m-1 text-white">&apos;s</label>
     </div>
   );
