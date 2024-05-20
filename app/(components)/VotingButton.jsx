@@ -2,7 +2,7 @@ import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 
-const VotingButton = () => {
+const VotingButton = ({ suggestion }) => {
   return (
     <div className="flex flex-col items-center space-y-1">
       <button>
@@ -11,9 +11,9 @@ const VotingButton = () => {
           className="text-orange-400 hover:cursor-pointer hover:text-red-200"
         />
       </button>
-      <label>5</label>
+      <label>{suggestion.upvotes}</label>
       <label>Vote</label>
-      <label>0</label>
+      <label>{suggestion.downvotes}</label>
       <button>
         <FontAwesomeIcon
           icon={faArrowDown}
