@@ -8,7 +8,7 @@ const suggestionSchema = new Schema(
     title: String,
     description: String,
     labels: [String],
-    popularity: Number,
+    votecount: Number,
     upvotes: Number,
     downvotes: Number,
   },
