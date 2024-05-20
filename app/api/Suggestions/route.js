@@ -12,6 +12,15 @@ export async function POST(req) {
       { status: 201 }
     );
   } catch (error) {
-    return NextResponse.json({ message: "Error", error }, { status: 500 });
+    return NextResponse.json({ message: "Error:", error }, { status: 500 });
+  }
+}
+
+export async function GET() {
+  try {
+    const suggestions = await Suggestion.find();
+    return NextResponse.json({ suggestions }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "Error: ", error }, { status: 500 });
   }
 }
