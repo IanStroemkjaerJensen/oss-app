@@ -36,7 +36,7 @@ const SuggestionForm = () => {
     title: "",
     description: "",
     labels: [],
-    popularity: 0,
+    votecount: 0,
     upvotes: 0,
     downvotes: 0,
   };
