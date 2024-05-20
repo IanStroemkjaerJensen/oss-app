@@ -24,10 +24,28 @@
   p {
     @apply text-sm text-default-textcolor;
   }
+  form {
+    @apply rounded-xl p-4;
+  }
+  label {
+    @apply mt-4;
+  }
+  input,
+  select,
+  textarea,
+  option {
+    @apply mt-1 rounded bg-card p-2;
+  }
 }
 
 @layer components {
   .icon {
     @apply text-default-textcolor text-xl;
+  }
+  .btn-forms {
+    @apply bg-blue-500 hover:no-underline tracking-wider text-center text-nav  uppercase cursor-pointer px-2 py-1 rounded-md transition-colors h-fit w-fit m-2;
+  }
+  .labels {
+    @apply rounded-xl bg-label-auburn w-fit h-fit text-sm p-1 m-1 text-white;
   }
 }

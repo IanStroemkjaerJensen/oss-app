@@ -1,8 +1,7 @@
-import SuggestionCard from "@/app/(components)/SuggestionCard";
-import React from "react";
+import SuggestionForm from "@/app/(components)/SuggestionForm";
 
 const SuggestionPage = ({ params }) => {
-  return <div>Post a new suggestion</div>;
+  return <SuggestionForm />;
 };
 
 export default SuggestionPage;
