@@ -39,11 +39,9 @@ The project is not finished yet
 
 
 
-# Things I've learned about
+# Technologies used
 - React, 
 - Next.js
 - Tailwind CSS
 - MongoDB
 - Mongoose
-- RESTful api
-- HTTP
