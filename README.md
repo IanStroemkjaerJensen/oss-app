@@ -26,7 +26,9 @@ The project is not finished yet and can't run as intended currently without a lo
 
 
 # Usage
-The project is not finished yet
+The project is not finished yet, but if you wanted to try and run the program, you would have to clone it and open it in visual studio code. You would also need to set an environtment variable with the details/URI of the MongoDB databasa you would use, which is referenced and used in the app/(models)/Suggestion.js file.
+
+When that is set up, all you have to do is run a terminal and type it into: "npm run dev" and then open up http://localhost:3000 in a browser
 
 # Features
 
