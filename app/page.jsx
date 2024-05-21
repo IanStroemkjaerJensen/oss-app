@@ -17,7 +17,7 @@ const Dashboard = async () => {
   return (
     <div className="flex relative">
       <h3 className="m-5">
-        Ideas for OpenSource projects and regular software projects
+        Suggest OpenSource projects that software developers could begin working on 
       </h3>
 
       <div className="lg:grid grid-cols-2 xl:grid-cols-4 gap-5 p-5">
