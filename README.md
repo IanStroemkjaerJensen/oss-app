@@ -9,7 +9,7 @@
 - Things Learned. 
 
 # Overview
-Webapp for posting and reading OpenSource / regular software ideas or suggestions for developers to start working on.
+Webapp for posting and reading OpenSource / regular software suggestions/ideas for developers to start working on.
 If you have ever been unsure of where to go to find inspiration on projects you could begin or collaborating on for learning, this could be the place.
 
 Here's how it looks so far:
