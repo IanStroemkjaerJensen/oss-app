@@ -18,8 +18,10 @@ const SuggestionCard = ({ suggestion }) => {
           <p className="flex-grow h-40 w-25 overflow-hidden text-ellipsis mb-2">
             {suggestion.description}
           </p>
-          <div className="flex flex-row">
-            <Label labels={suggestion.labels} />
+          <div className="h-20 w-25 overflow-hidden">
+            {suggestion.labels.map((label, index) => (
+              <Label key={index} labels={label} />
+            ))}
           </div>
           <p className="text-xs ml-auto">{suggestion.createdAt}</p>
           <div className="flex-grow" />

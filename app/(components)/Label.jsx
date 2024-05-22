@@ -2,8 +2,9 @@ import React from "react";
 
 const Label = ({ labels }) => {
   const getColor = (labels) => {
-    let color = "bg-red-700";
+    //Todo - handle / symbols in labels
 
+    let color = "bg-slate-700";
     if (Array.isArray(labels)) {
       labels.forEach((label) => {
         switch (label) {
@@ -151,7 +152,7 @@ const Label = ({ labels }) => {
 
   return (
     <span
-      className={`labels display: inline-block rounded-xl w-fit h-fit text-sm p-1 m-1 text-black ${getColor(
+      className={`labels display: inline-block rounded-xl w-15 h-7 text-sm p-1 m-1 text-black ${getColor(
         labels
       )}`}
     >

@@ -35,7 +35,7 @@ const SuggestionForm = () => {
   const startingSuggestionData = {
     title: "",
     description: "",
-    labels: [""],
+    labels: [],
     votecount: 0,
     upvotes: 0,
     downvotes: 0,
@@ -54,17 +54,19 @@ const SuggestionForm = () => {
   };
 
   const handleLabelChange = (e) => {
-    const value = e.target.value;
-    setFormData((prevState) => {
-      // Prevents duplicate labels
-      if (prevState.labels.includes(value)) {
-        return prevState;
-      }
-      return {
+    const { value, checked } = e.target;
+
+    if (checked) {
+      setFormData((prevState) => ({
         ...prevState,
         labels: [...prevState.labels, value],
-      };
-    });
+      }));
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        labels: prevState.labels.filter((label) => label !== value),
+      }));
+    }
   };
 
   const removeLabel = (index) => {
@@ -114,35 +116,21 @@ const SuggestionForm = () => {
           rows="5"
         ></textarea>
         <label>Labels</label>
-        <select
-          className="h-40"
-          multiple
-          onChange={handleLabelChange}
-          value={formData.labels}
-        >
-          <option value="" disabled>
-            Select label
-          </option>
+        <div className="label-options">
           {predefinedLabels.map((label) => (
-            <option key={label} value={label}>
-              {label}
-            </option>
-          ))}
-        </select>
-        <div className="selected-labels">
-          {formData.labels.map((label, index) => (
-            <div key={index} className="label-item ">
-              <span className="labels">{label}</span>
-              <button
-                className="btn-forms "
-                type="button"
-                onClick={() => removeLabel(index)}
-              >
-                Remove
-              </button>
+            <div key={label}>
+              <input
+                type="checkbox"
+                id={label}
+                value={label}
+                onChange={handleLabelChange}
+                checked={formData.labels.includes(label)}
+              />
+              <label htmlFor={label}>{label}</label>
             </div>
           ))}
         </div>
+
         <button className="btn-forms mt-5" type="submit">
           Create Suggestion
         </button>
