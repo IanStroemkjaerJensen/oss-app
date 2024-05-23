@@ -1,4 +1,4 @@
-# Learning project  - ProjectSuggestionsHub 
+# Learning project - For learning Next.js & Tailwind CSS - Project OpenSource Suggestions
 # Table of content
 - Overview
 - Prerequisites 
