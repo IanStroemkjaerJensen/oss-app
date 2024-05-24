@@ -91,7 +91,7 @@ const Label = ({ labels }) => {
           color = "bg-red-300";
           break;
         case "AI/ML":
-          color = "bg-coral-300";
+          color = "bg-orange-300";
           break;
         case "AR/VR":
           color = "bg-blue-300";
