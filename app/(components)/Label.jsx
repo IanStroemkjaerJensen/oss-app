@@ -152,7 +152,7 @@ const Label = ({ labels }) => {
 
   return (
     <span
-      className={`labels display: inline-block rounded-xl w-15 h-7 text-sm p-1 m-1 text-black ${getColor(
+      className={`labels display: inline-block rounded-2xl w-15 h-7 text-sm p-1 m-1 text-black ${getColor(
         labels
       )}`}
     >
