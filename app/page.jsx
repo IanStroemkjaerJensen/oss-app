@@ -18,7 +18,8 @@ const Dashboard = async () => {
     <div className="flex relative">
       <h3 className="m-5">
         Ideas hub where people can post suggestions or find ideas about
-        OpenSource projects that you could begin working or colaborating on
+        OpenSource or regular software projects that they could begin working or
+        colaborating on
       </h3>
 
       <div className="lg:grid grid-cols-2 xl:grid-cols-4 gap-5 p-5">
