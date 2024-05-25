@@ -21,6 +21,7 @@ const SuggestionCard = ({ suggestion }) => {
 
   return (
     <VotingCard suggestion={suggestion}>
+
       <div className="flex flex-col  bg-card hover:bg-card-hover rounded-md shadow-lg p-3 m-1 h-full w-full">
         <div className="flex justify-end mb-3">
           <PopularityDisplay upvotes={suggestion.upvotes} />
@@ -47,7 +48,6 @@ const SuggestionCard = ({ suggestion }) => {
           <div className="flex-grow" />
         </Link>
       </div>
-      -
     </VotingCard>
   );
 };
