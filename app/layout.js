@@ -10,7 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "OpenSource Suggestions",
-  description: "Suggestions of OpenSource projects for developers",
+  description:
+    "Suggestions of OpenSource projects or regular project ideas for developers",
 };
 
 export default function RootLayout({ children }) {
