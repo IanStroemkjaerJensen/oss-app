@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import Error from "next/error";
 
-const SuggestionForm = () => {
+const SuggestionForm = ({ suggestion }) => {
+  const EDITMODE = suggestion._id === "new" ? false : true;
   const router = useRouter();
 
   const predefinedLabels = [
@@ -40,6 +41,12 @@ const SuggestionForm = () => {
     upvotes: 0,
     downvotes: 0,
   };
+
+  if (EDITMODE) {
+    startingSuggestionData["title"] = suggestion.title;
+    startingSuggestionData["description"] = suggestion.description;
+    startingSuggestionData["labels"] = suggestion.labels;
+  }
 
   const [formData, setFormData] = useState(startingSuggestionData);
 
@@ -79,16 +86,28 @@ const SuggestionForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("/api/Suggestions", {
-      method: "POST",
-      body: JSON.stringify({ formData }),
-      "content-type": "application/json",
-    });
 
-    if (!response.ok) {
-      throw new Error("Failed to create new Suggestion.");
+    if (EDITMODE) {
+      const response = await fetch(`/api/Suggestions/${suggestion._id}`, {
+        method: "PUT",
+        body: JSON.stringify({ formData }),
+        "content-type": "application/json",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to Update Suggestion.");
+      }
+    } else {
+      const response = await fetch("/api/Suggestions", {
+        method: "POST",
+        body: JSON.stringify({ formData }),
+        "content-type": "application/json",
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to create new Suggestion.");
+      }
     }
-
     router.refresh();
     router.push("/");
   };
@@ -96,7 +115,9 @@ const SuggestionForm = () => {
   return (
     <div className="flex justify-center">
       <form onSubmit={handleSubmit} className="flex flex-col items-center">
-        <h3>Create A New Suggestion!</h3>
+        <h3>
+          {EDITMODE ? "Update your Suggestion" : "Create your Suggestion"}
+        </h3>
         <label>Title </label>
         <input
           id="title"
@@ -132,7 +153,7 @@ const SuggestionForm = () => {
         </div>
 
         <button className="btn-forms mt-5" type="submit">
-          Create Suggestion
+          {EDITMODE ? "Update" : "Create"}
         </button>
       </form>
     </div>
