@@ -14,9 +14,11 @@ If you have ever been unsure of where to go to find inspiration on projects you 
 
 Here's how it looks so far:
 
-![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/a3cbdc66-17cf-43ab-b8f6-4011d4e31544)
+![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/b7c310cf-4c98-4002-b8c3-adebb3d36a0e)
 
-![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/cd9dce57-a97f-4b5b-b9c1-934aff831ac8)
+
+![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/c4f64efc-3188-466c-acce-8fbe8f06ff1c)
+
 
 # Prerequisites 
 The project is not finished yet and can't run as intended currently without a local environment variable with the database URI that is needed in the app/(models/Suggestion.js file on line 3. 
