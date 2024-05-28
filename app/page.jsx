@@ -16,7 +16,7 @@ const Dashboard = async () => {
   const { suggestions } = await getSuggestions();
   return (
     <div className="flex relative">
-      <h3 className="m-5">
+      <h3 className="m-4">
         Ideas hub where people can post suggestions or find ideas about
         OpenSource or regular software projects that they could begin working or
         colaborating on

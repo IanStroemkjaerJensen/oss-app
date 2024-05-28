@@ -11,7 +11,7 @@ const VotingCard = ({ children, suggestion }) => {
       <div className="flex flex-col justify-center ml-3">
         <VotingButton suggestion={suggestion} />
       </div>
-      <div className="absolute bottom-0 left-[60%] transform translate-y-[100%] flex items-center ">
+      <div className="absolute bottom-0 left-[50%] transform translate-y-[100%] flex items-center">
         <UpvotesBlock suggestion={suggestion} />
       </div>
     </div>
