@@ -14,7 +14,8 @@ If you have ever been unsure of where to go to find inspiration on projects you 
 
 Here's how it looks so far:
 
-![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/1a83f3a8-8d50-4fad-a4d4-fa7252c4bdad)
+![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/b65eb980-f9f9-485d-9a3f-a4902ffde50d)
+
 
 
 
