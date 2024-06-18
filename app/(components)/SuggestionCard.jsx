@@ -33,7 +33,7 @@ const SuggestionCard = ({ suggestion }) => {
             {suggestion.title}
           </h4>
           <hr className="h-px border-0 bg-page mb-2" />
-          <p className="flex-grow h-40 w-full overflow-hidden text-ellipsis mb-2">
+          <p className="flex-grow h-35 w-full overflow-hidden text-ellipsis mb-2">
             {suggestion.description}
           </p>
           <div className="h-fit w-fit overflow-hidden">

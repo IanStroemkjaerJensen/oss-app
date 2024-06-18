@@ -1,22 +1,68 @@
 "use client";
 
-import { faArrowDown, faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useState } from "react";
+import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const VotingButton = ({ suggestion }) => {
   const [upvotes, setUpvotes] = useState(suggestion.upvotes);
   const [downvotes, setDownvotes] = useState(suggestion.downvotes);
 
-  const onUpvoteClick = () => {
-    setUpvotes(upvotes + 1);
+  const onUpvoteClick = async () => {
+    const newUpvotes = upvotes + 1;
+
+    try {
+      const response = await fetch(`/api/Suggestions/${suggestion._id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          upvotes: newUpvotes,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to update suggestion upvotes");
+      }
+
+      const data = await response.json();
+      console.log("Suggestion updated successfully:", data);
+
+      setUpvotes(newUpvotes);
+    } catch (error) {
+      console.error("Error updating suggestion:", error.message);
+    }
   };
 
-  const onDownvoteClick = () => {
-    setDownvotes(downvotes + 1);
+  const onDownvoteClick = async () => {
+    const newDownvotes = downvotes + 1;
+
+    try {
+      const response = await fetch(`/api/Suggestions/${suggestion._id}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          downvotes: newDownvotes,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to update suggestion downvotes");
+      }
+
+      const data = await response.json();
+      console.log("Suggestion updated successfully:", data);
+
+      setDownvotes(newDownvotes);
+    } catch (error) {
+      console.error("Error updating suggestion:", error.message);
+    }
   };
 
-  //Todo - Create update function that can be used for updating upvotes
+  const votecount = upvotes - downvotes;
 
   return (
     <div className="flex flex-col items-center space-y-1">
@@ -26,9 +72,8 @@ const VotingButton = ({ suggestion }) => {
           className="text-orange-400 hover:cursor-pointer hover:text-red-200"
         />
       </button>
-      <label>{suggestion.upvotes}</label>
+      <label>{votecount}</label>
       <label>Vote</label>
-      <label>{suggestion.downvotes}</label>
       <button onClick={onDownvoteClick}>
         <FontAwesomeIcon
           icon={faArrowDown}
