@@ -16,7 +16,7 @@ export async function PUT(req, { params }) {
   try {
     const { id } = params;
     const body = await req.json();
-    const suggestionData = body.formData;
+    const suggestionData = body;
 
     const updateSuggestionData = await Suggestion.findByIdAndUpdate(id, {
       ...suggestionData,
