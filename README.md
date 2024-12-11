@@ -22,6 +22,9 @@ Here's how it looks so far:
 
 ![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/abc45f6b-7a2a-4577-9e48-9c4c497b1f2e)
 
+![image](https://github.com/user-attachments/assets/315dd6fc-18f5-4f84-97fa-094b49329152)
+
+
 
 
 # Prerequisites
