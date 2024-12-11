@@ -1,16 +1,16 @@
 # Learning project - For learning Next.js & Tailwind CSS - Project OpenSource Suggestions
+
 # Table of content
+
 - Overview
-- Prerequisites 
+- Prerequisites
 - Usage
 - Features
-- Code examples 
-- testing 
-- Things Learned. 
+- Things learned
 
 # Overview
-Webapp for posting and reading OpenSource / regular software suggestions/ideas for developers to start working on.
-If you have ever been unsure of where to go to find inspiration on projects you could begin or collaborating on for learning, this could be the place.
+
+Webapp for posting and discovering software ideas/suggestions
 
 Here's how it looks so far:
 
@@ -18,29 +18,26 @@ Here's how it looks so far:
 
 ![image](https://github.com/IanStroemkjaerJensen/oss-app/assets/82367076/cd9dce57-a97f-4b5b-b9c1-934aff831ac8)
 
-# Prerequisites 
-The project is not finished yet and can't run as intended currently without a local environment variable with the database URI that is needed in the app/(models/Suggestion.js file on line 3. 
+# Prerequisites
 
+The project is not finished yet and was just for getting a bit more familiar with Tailwindcss and Next.js, but if you wan't to try it out you will have to create and use your own env.local file with environment variables for Mongodb and Auth0 integration
+
+Clone the repository and open it up in vs code
 
 # Usage
-The project is not finished yet, but if you wanted to try and run the program, you would have to clone it and open it in visual studio code. You would also need to set an environtment variable with the details/URI of the MongoDB databasa you would use, which is referenced and used in the app/(models)/Suggestion.js file.
 
-When that is set up, all you have to do is run a terminal and type it into: "npm run dev" and then open up http://localhost:3000 in a browser
+run the terminal and type: "npm run dev" into it, then open up localhost:3000 in a browser
 
 # Features
 
+CRUD operations for the suggestion model
+Auth0 authentication integration
+Voting functionality
 
+# Things learned
 
-# Code examples 
-
-
-# Testing 
-
-
-
-# Technologies used
-- React, 
-- Next.js
+- React
 - Tailwind CSS
+- Nextjs
 - MongoDB
 - Mongoose
