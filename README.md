@@ -37,7 +37,9 @@ run the terminal and type: "npm run dev" into it, then open up localhost:3000 in
 # Features
 
 CRUD operations for the suggestion model
+
 Auth0 authentication integration
+
 Voting functionality
 
 # Things learned
